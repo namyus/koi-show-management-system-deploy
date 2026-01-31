@@ -73,7 +73,7 @@ The API provides endpoints to manage:
 ## Screenshots
 
 <div style="text-align: center;">
-    <img src="" style="width: 70%;"/>
+    <img src="https://ibb.co/vxMVh65N" style="width: 70%;"/>
     <p><em>Screenshot 1</em></p>
 </div>
 
@@ -81,17 +81,12 @@ The API provides endpoints to manage:
 <br/>
 
 <div style="text-align: center;">
-    <img src=""  style="width: 70%;"/>
+    <img src="https://ibb.co/pBbm3K9N"  style="width: 70%;"/>
     <p><em>Screenshot 2</em></p>
 </div>
 
 <hr/>
 <br/>
-
-<div style="text-align: center;">
-    <img src=""  style="width: 70%;"/>
-    <p><em>Screenshot 3</em></p>
-</div>
 
 <hr/>
 <br/>
