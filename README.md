@@ -72,24 +72,23 @@ The API provides endpoints to manage:
 
 ## Screenshots
 
-<div style="text-align: center;">
-    <img src="https://ibb.co/vxMVh65N" style="width: 70%;"/>
-    <p><em>Screenshot 1</em></p>
+## Screenshots
+
+<div align="center">
+  <img src="https://i.ibb.co/XXXXX/screenshot1.png" width="70%" />
+  <p><em>Screenshot 1</em></p>
+</div>
+
+<hr/>
+
+<div align="center">
+  <img src="https://i.ibb.co/YYYYY/screenshot2.png" width="70%" />
+  <p><em>Screenshot 2</em></p>
 </div>
 
 <hr/>
 <br/>
 
-<div style="text-align: center;">
-    <img src="https://ibb.co/pBbm3K9N"  style="width: 70%;"/>
-    <p><em>Screenshot 2</em></p>
-</div>
-
-<hr/>
-<br/>
-
-<hr/>
-<br/>
 
 ## Authors and Acknowledgment
 
