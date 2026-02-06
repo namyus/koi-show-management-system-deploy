@@ -9,7 +9,7 @@ This project is no longer actively maintained. However, you are welcome to clone
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/your-username/your-repo-name
+   git clone https://github.com/namyus/koi-show-management-system-deploy
    ```
 
 2. **Navigate into the project directory:**
@@ -72,7 +72,7 @@ If you prefer to fork the repository and manage your own copy:
 3. **Clone your forked repository:**
 
    ```bash
-   git clone https://github.com/your-username/your-forked-repo-name
+   git clone https://github.com/namyus/koi-show-management-system-deploy
    ```
 
 4. **Navigate into your project directory:**
