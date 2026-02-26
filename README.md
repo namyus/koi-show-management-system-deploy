@@ -68,7 +68,14 @@ The API provides endpoints to manage:
 
 ## Screenshots
 
+<<<<<<< Updated upstream
 ## Screenshots
+=======
+<div style="text-align: center;">
+    <img src="https://ibb.co/vxMVh65N" style="width: 70%;"/>
+    <p><em>Screenshot 1</em></p>
+</div>
+>>>>>>> Stashed changes
 
 <div align="center">
   <img src="https://i.ibb.co/kgP5JsnL/Screenshot-2026-01-31-211054.png" width="70%" />
@@ -76,22 +83,62 @@ The API provides endpoints to manage:
 </div>
 <br/>
 
+<<<<<<< Updated upstream
 ---
+=======
+<div style="text-align: center;">
+    <img src="https://ibb.co/pBbm3K9N"  style="width: 70%;"/>
+    <p><em>Screenshot 2</em></p>
+</div>
+>>>>>>> Stashed changes
 
 ## Docker Setup
 
-This project includes Docker support for running the API and SQL Server in containers.
+<<<<<<< Updated upstream
+KoiShow supports running the API and SQL Server using Docker.
 
-### Requirements
+### Prerequisites
+=======
+<hr/>
+<br/>
+>>>>>>> Stashed changes
 
 - Docker Desktop
 - Docker Compose
 
-### Running with Docker
+### Run with Docker
 
-1. Make sure Docker Desktop is running.
+1. Make sure **Docker Desktop is running**.
 
 2. From the root directory of the project, run:
 
    ```bash
    docker compose up --build
+   ```
+3. After startup:
+
+- API Base URL: http://localhost:8080
+
+- Swagger UI: http://localhost:8080/swagger
+
+- SQL Server: localhost:1434
+
+## Stop Containers:
+
+   ```bash
+   docker compose down
+   ```
+
+## Reset Database (Remove Volume):
+
+   ```bash
+   docker compose down -v
+   ```
+### Notes
+
+1. The API uses environment variables for the connection string inside Docker.
+
+2. Inside containers, use sqlserver as the database host (not localhost).
+
+3. Entity Framework migrations run automatically at startup (if configured in Program.cs).
+
