@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option csharp_namespace = "KoiShow.APIService";
+
+service PointGrpcService {
+  rpc GetPoint (PointRequest) returns (PointReply);
+}
+
+message PointRequest {
+  int32 pointId = 1;
+}
+
+message PointReply {
+  int32 id = 1;
+  int32 totalScore = 2;
+}

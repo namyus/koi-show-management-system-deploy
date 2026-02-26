@@ -1,17 +1,19 @@
 using KoiShow.APIService.Helper;
 using KoiShow.Data.Models;
 using KoiShow.Service;
-using KoiShow.Service;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Text;
 using System.Text.Json.Serialization;
+using Microsoft.EntityFrameworkCore;
+using KoiShow.APIService.Hubs;
+using KoiShow.APIService.GrpcServices;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllers();
-builder.Services.AddScoped<FA24_SE1716_PRN231_G2_KoiShowContext>();
+builder.Services.AddScoped<FA24_SE171442_PRN231_AS_KoiShowContext>();
 builder.Services.AddControllersWithViews().AddJsonOptions(options =>
 {
     options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
@@ -50,17 +52,30 @@ builder.Services.AddSwaggerGen(options =>
 // Configure CORS
 var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
+//builder.Services.AddCors(options =>
+//{
+//    options.AddPolicy(
+//        name: MyAllowSpecificOrigins,
+//        policy =>
+//        {
+//            policy.AllowAnyOrigin()   // Allow any origin
+//                  .AllowAnyMethod()   // Allow any HTTP method (GET, POST, etc.)
+//                  .AllowAnyHeader();  // Allow any headers (Authorization, etc.)
+//        }
+//    );
+//});
+
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy(
-        name: MyAllowSpecificOrigins,
+    options.AddPolicy(name: MyAllowSpecificOrigins,
         policy =>
         {
-            policy.AllowAnyOrigin()   // Allow any origin
-                  .AllowAnyMethod()   // Allow any HTTP method (GET, POST, etc.)
-                  .AllowAnyHeader();  // Allow any headers (Authorization, etc.)
-        }
-    );
+            policy
+                .WithOrigins("http://127.0.0.1:5500") 
+                .AllowAnyHeader()
+                .AllowAnyMethod()
+                .AllowCredentials(); 
+        });
 });
 
 // Configure Project DI
@@ -93,7 +108,19 @@ builder.Services.AddAuthentication("Bearer")
 // Add authorization
 builder.Services.AddAuthorization();
 
+// Add SignalR
+builder.Services.AddSignalR();
+builder.Services.AddGrpc();
+
 var app = builder.Build();
+
+// Automatically apply pending EF Core migrations on application startup
+// This ensures the database is created and updated inside Docker container
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<FA24_SE171442_PRN231_AS_KoiShowContext>();
+    db.Database.Migrate(); // Apply any pending migrations
+}
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -109,6 +136,10 @@ app.UseCors(MyAllowSpecificOrigins);
 app.UseAuthentication();
 
 app.UseAuthorization();
+
+app.MapHub<KoiHub>("/koiHub");
+
+app.MapGrpcService<PointGrpcService>();
 
 app.MapControllers();
 

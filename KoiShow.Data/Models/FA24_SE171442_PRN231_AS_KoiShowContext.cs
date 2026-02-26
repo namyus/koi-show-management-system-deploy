@@ -8,18 +8,20 @@ using Microsoft.Extensions.Configuration;
 
 namespace KoiShow.Data.Models;
 
-public class FA24_SE1716_PRN231_G2_KoiShowContext : DbContext
+public class FA24_SE171442_PRN231_AS_KoiShowContext : DbContext
 {
-    public FA24_SE1716_PRN231_G2_KoiShowContext()
+    public FA24_SE171442_PRN231_AS_KoiShowContext()
     {
     }
 
-    public FA24_SE1716_PRN231_G2_KoiShowContext(DbContextOptions<FA24_SE1716_PRN231_G2_KoiShowContext> options)
+    public FA24_SE171442_PRN231_AS_KoiShowContext(DbContextOptions<FA24_SE171442_PRN231_AS_KoiShowContext> options)
         : base(options)
     {
     }
 
     public virtual DbSet<Account> Accounts { get; set; }
+
+    public DbSet<RefreshToken> RefreshTokens { get; set; }
 
     public virtual DbSet<Animal> Animals { get; set; }
 
@@ -52,7 +54,7 @@ public class FA24_SE1716_PRN231_G2_KoiShowContext : DbContext
     //=> optionsBuilder.UseSqlServer(GetConnectionString("DefaultConnection")).UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
 
     //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    //    => optionsBuilder.UseSqlServer("Data Source=LUAN;Initial Catalog=FA24_SE1716_PRN231_G2_KoiShow;User ID=sa;Password=12345;Encrypt=False");
+    //    => optionsBuilder.UseSqlServer("Data Source=LUAN;Initial Catalog=FA24_SE171442_PRN231_AS_KoiShow;User ID=sa;Password=12345;Encrypt=False");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -1173,6 +1175,66 @@ public class FA24_SE1716_PRN231_G2_KoiShowContext : DbContext
                 Currency = "USD",
                 CreatedTime = DateTime.Now,
                 LastUpdatedTime = DateTime.Now
+            }
+        });
+
+        //Refresh Token
+        modelBuilder.Entity<RefreshToken>().HasData(new List<RefreshToken>
+        {
+            new RefreshToken
+            {
+                Id = 1,
+                Token = "refresh_admin_001",
+                ExpiryDate = new DateTime(2026, 3, 1),
+                CreatedAt = new DateTime(2026, 2, 24),
+                IsRevoked = false,
+                AccountId = 1,
+                CreatedTime = new DateTime(2026, 2, 24),
+                LastUpdatedTime = new DateTime(2026, 2, 24)
+            },
+            new RefreshToken
+            {
+                Id = 2,
+                Token = "refresh_staff_001",
+                ExpiryDate = new DateTime(2026, 3, 1),
+                CreatedAt = new DateTime(2026, 2, 24),
+                IsRevoked = false,
+                AccountId = 2,
+                CreatedTime = new DateTime(2026, 2, 24),
+                LastUpdatedTime = new DateTime(2026, 2, 24)
+            },
+            new RefreshToken
+            {
+                Id = 3,
+                Token = "refresh_customer1_001",
+                ExpiryDate = new DateTime(2026, 3, 1),
+                CreatedAt = new DateTime(2026, 2, 24),
+                IsRevoked = false,
+                AccountId = 3,
+                CreatedTime = new DateTime(2026, 2, 24),
+                LastUpdatedTime = new DateTime(2026, 2, 24)
+            },
+            new RefreshToken
+            {
+                Id = 4,
+                Token = "refresh_customer2_001",
+                ExpiryDate = new DateTime(2026, 3, 1),
+                CreatedAt = new DateTime(2026, 2, 24),
+                IsRevoked = false,
+                AccountId = 4,
+                CreatedTime = new DateTime(2026, 2, 24),
+                LastUpdatedTime = new DateTime(2026, 2, 24)
+            },
+            new RefreshToken
+            {
+                Id = 5,
+                Token = "refresh_customer3_001",
+                ExpiryDate = new DateTime(2026, 3, 1),
+                CreatedAt = new DateTime(2026, 2, 24),
+                IsRevoked = false,
+                AccountId = 5,
+                CreatedTime = new DateTime(2026, 2, 24),
+                LastUpdatedTime = new DateTime(2026, 2, 24)
             }
         });
     }

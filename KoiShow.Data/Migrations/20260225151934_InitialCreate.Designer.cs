@@ -4,20 +4,23 @@ using KoiShow.Data.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
 namespace KoiShow.Data.Migrations
 {
-    [DbContext(typeof(FA24_SE1716_PRN231_G2_KoiShowContext))]
-    partial class FA24_SE1716_PRN231_G2_KoiShowContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(FA24_SE171442_PRN231_AS_KoiShowContext))]
+    [Migration("20260225151934_InitialCreate")]
+    partial class InitialCreate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "8.0.5")
+                .HasAnnotation("ProductVersion", "8.0.10")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -88,10 +91,10 @@ namespace KoiShow.Data.Migrations
                             Id = 1,
                             Address = "1773 đường Kiếm Lai, phường Tu Tiên, quận Hội Châu, thành phố Long Hoàng",
                             BirthDay = new DateOnly(2003, 1, 1),
-                            CreatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2320),
+                            CreatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(1916),
                             Email = "admin@koi.show",
                             FullName = "Quản Trị Viên",
-                            LastUpdatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2321),
+                            LastUpdatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(1917),
                             Password = "123",
                             Phone = "0971781353",
                             Role = 0,
@@ -102,10 +105,10 @@ namespace KoiShow.Data.Migrations
                             Id = 2,
                             Address = "983 đường Kiếm Lai, phường Tu Tiên, quận Hội Châu, thành phố Long Hoàng",
                             BirthDay = new DateOnly(2003, 1, 1),
-                            CreatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2330),
+                            CreatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(1925),
                             Email = "staff@koi.show",
                             FullName = "Quản Nhân Viên",
-                            LastUpdatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2331),
+                            LastUpdatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(1926),
                             Password = "123",
                             Phone = "0971781351",
                             Role = 1,
@@ -116,10 +119,10 @@ namespace KoiShow.Data.Migrations
                             Id = 3,
                             Address = "179 đường Kiếm Lai, phường Tu Tiên, quận Hội Châu, thành phố Long Hoàng",
                             BirthDay = new DateOnly(2003, 1, 1),
-                            CreatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2336),
+                            CreatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(1929),
                             Email = "customer1@koi.show",
                             FullName = "Quản Khách Hàng 1",
-                            LastUpdatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2338),
+                            LastUpdatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(1930),
                             Password = "123",
                             Phone = "0971781352",
                             Role = 2,
@@ -130,10 +133,10 @@ namespace KoiShow.Data.Migrations
                             Id = 4,
                             Address = "1 đường Kiếm Lai, phường Tu Tiên, quận Hội Châu, thành phố Long Hoàng",
                             BirthDay = new DateOnly(2003, 1, 1),
-                            CreatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2342),
+                            CreatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(1933),
                             Email = "customer2@koi.show",
                             FullName = "Quản Khách Hàng 2",
-                            LastUpdatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2344),
+                            LastUpdatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(1934),
                             Password = "123",
                             Phone = "0971781354",
                             Role = 2,
@@ -144,10 +147,10 @@ namespace KoiShow.Data.Migrations
                             Id = 5,
                             Address = "2 đường Kiếm Lai, phường Tu Tiên, quận Hội Châu, thành phố Long Hoàng",
                             BirthDay = new DateOnly(2003, 1, 1),
-                            CreatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2349),
+                            CreatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(1937),
                             Email = "customer3@koi.show",
                             FullName = "Quản Khách Hàng 3",
-                            LastUpdatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2350),
+                            LastUpdatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(1938),
                             Password = "123",
                             Phone = "0971781355",
                             Role = 2,
@@ -228,12 +231,12 @@ namespace KoiShow.Data.Migrations
                             Id = 1,
                             AnimalName = "Koi Kohaku 01",
                             BirthDate = new DateTime(2020, 5, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2544),
+                            CreatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2068),
                             Description = "Cá Koi Kohaku với màu đỏ trắng đẹp mắt.",
                             Gender = 1,
                             HeathStatus = "Healthy",
                             ImgLink = "https://example.com/koi_kohaku_01.jpg",
-                            LastUpdatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2545),
+                            LastUpdatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2069),
                             OwnerId = 1,
                             Size = 30,
                             VarietyId = 1,
@@ -244,12 +247,12 @@ namespace KoiShow.Data.Migrations
                             Id = 2,
                             AnimalName = "Koi Sanke 01",
                             BirthDate = new DateTime(2019, 7, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2553),
+                            CreatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2074),
                             Description = "Cá Koi Sanke với đốm đen và đỏ trên nền trắng.",
                             Gender = 2,
                             HeathStatus = "Healthy",
                             ImgLink = "https://example.com/koi_sanke_01.jpg",
-                            LastUpdatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2554),
+                            LastUpdatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2074),
                             OwnerId = 2,
                             Size = 35,
                             VarietyId = 2,
@@ -260,12 +263,12 @@ namespace KoiShow.Data.Migrations
                             Id = 3,
                             AnimalName = "Koi Showa 01",
                             BirthDate = new DateTime(2021, 2, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2559),
+                            CreatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2131),
                             Description = "Cá Koi Showa với các đốm đen đỏ nổi bật.",
                             Gender = 1,
                             HeathStatus = "Sick",
                             ImgLink = "https://example.com/koi_showa_01.jpg",
-                            LastUpdatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2560),
+                            LastUpdatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2132),
                             OwnerId = 3,
                             Size = 32,
                             VarietyId = 3,
@@ -276,12 +279,12 @@ namespace KoiShow.Data.Migrations
                             Id = 4,
                             AnimalName = "Koi Shiro Utsuri 01",
                             BirthDate = new DateTime(2020, 10, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2565),
+                            CreatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2135),
                             Description = "Cá Koi Shiro Utsuri với màu đen trắng.",
                             Gender = 2,
                             HeathStatus = "Healthy",
                             ImgLink = "https://example.com/koi_shiro_01.jpg",
-                            LastUpdatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2566),
+                            LastUpdatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2136),
                             OwnerId = 1,
                             Size = 40,
                             VarietyId = 4,
@@ -292,12 +295,12 @@ namespace KoiShow.Data.Migrations
                             Id = 5,
                             AnimalName = "Koi Hi Utsuri 01",
                             BirthDate = new DateTime(2018, 8, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2572),
+                            CreatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2139),
                             Description = "Cá Koi Hi Utsuri với đốm đỏ tươi trên nền đen.",
                             Gender = 1,
                             HeathStatus = "Healthy",
                             ImgLink = "https://example.com/koi_hi_utsuri_01.jpg",
-                            LastUpdatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2573),
+                            LastUpdatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2140),
                             OwnerId = 2,
                             Size = 37,
                             VarietyId = 5,
@@ -308,12 +311,12 @@ namespace KoiShow.Data.Migrations
                             Id = 6,
                             AnimalName = "Koi Ki Utsuri 01",
                             BirthDate = new DateTime(2019, 4, 30, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2580),
+                            CreatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2145),
                             Description = "Cá Koi Ki Utsuri với đốm vàng trên nền đen.",
                             Gender = 2,
                             HeathStatus = "Sick",
                             ImgLink = "https://example.com/koi_ki_utsuri_01.jpg",
-                            LastUpdatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2581),
+                            LastUpdatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2146),
                             OwnerId = 3,
                             Size = 42,
                             VarietyId = 6,
@@ -324,12 +327,12 @@ namespace KoiShow.Data.Migrations
                             Id = 7,
                             AnimalName = "Koi Asagi 01",
                             BirthDate = new DateTime(2021, 3, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2586),
+                            CreatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2149),
                             Description = "Cá Koi Asagi với màu xanh và đỏ nhạt.",
                             Gender = 1,
                             HeathStatus = "Healthy",
                             ImgLink = "https://example.com/koi_asagi_01.jpg",
-                            LastUpdatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2587),
+                            LastUpdatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2150),
                             OwnerId = 1,
                             Size = 38,
                             VarietyId = 7,
@@ -340,12 +343,12 @@ namespace KoiShow.Data.Migrations
                             Id = 8,
                             AnimalName = "Koi Shusui 01",
                             BirthDate = new DateTime(2020, 12, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2593),
+                            CreatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2153),
                             Description = "Cá Koi Shusui với các vảy lớn và màu sắc đẹp.",
                             Gender = 2,
                             HeathStatus = "Healthy",
                             ImgLink = "https://example.com/koi_shusui_01.jpg",
-                            LastUpdatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2594),
+                            LastUpdatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2154),
                             OwnerId = 2,
                             Size = 36,
                             VarietyId = 8,
@@ -356,12 +359,12 @@ namespace KoiShow.Data.Migrations
                             Id = 9,
                             AnimalName = "Koi Bekko 01",
                             BirthDate = new DateTime(2019, 9, 29, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2599),
+                            CreatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2157),
                             Description = "Cá Koi Bekko với các đốm đen trên nền trắng.",
                             Gender = 1,
                             HeathStatus = "Sick",
                             ImgLink = "https://example.com/koi_bekko_01.jpg",
-                            LastUpdatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2600),
+                            LastUpdatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2157),
                             OwnerId = 3,
                             Size = 34,
                             VarietyId = 9,
@@ -452,11 +455,11 @@ namespace KoiShow.Data.Migrations
                             CompetitionType = "Beauty",
                             ContactInfo = "info@koicontest.com",
                             ContestName = "Koi Beauty Contest",
-                            CreatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2670),
+                            CreatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2196),
                             Description = "Thi đấu để chọn ra những chú cá Koi đẹp nhất về màu sắc và hình dáng.",
                             EndDate = new DateTime(2024, 11, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Image = "https://example.com/koi_beauty_contest.jpg",
-                            LastUpdatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2671),
+                            LastUpdatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2197),
                             Location = "Hồ Chí Minh",
                             Participants = 50,
                             PatternPointPercent = 25,
@@ -472,11 +475,11 @@ namespace KoiShow.Data.Migrations
                             CompetitionType = "Performance",
                             ContactInfo = "contact@koicontest.com",
                             ContestName = "Koi Performance Contest",
-                            CreatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2680),
+                            CreatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2204),
                             Description = "Cuộc thi các màn trình diễn cá Koi độc đáo.",
                             EndDate = new DateTime(2024, 12, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Image = "https://example.com/koi_performance_contest.jpg",
-                            LastUpdatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2681),
+                            LastUpdatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2204),
                             Location = "Hà Nội",
                             Participants = 40,
                             PatternPointPercent = 30,
@@ -492,11 +495,11 @@ namespace KoiShow.Data.Migrations
                             CompetitionType = "Exhibition",
                             ContactInfo = "support@koicontest.com",
                             ContestName = "International Koi Show",
-                            CreatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2688),
+                            CreatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2208),
                             Description = "Sự kiện triển lãm cá Koi quốc tế với nhiều loại cá đẹp từ các quốc gia.",
                             EndDate = new DateTime(2025, 1, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Image = "https://example.com/international_koi_show.jpg",
-                            LastUpdatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2689),
+                            LastUpdatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2209),
                             Location = "Đà Nẵng",
                             Participants = 100,
                             PatternPointPercent = 30,
@@ -512,11 +515,11 @@ namespace KoiShow.Data.Migrations
                             CompetitionType = "Breeding",
                             ContactInfo = "breeding@koicontest.com",
                             ContestName = "Koi Breeding Contest",
-                            CreatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2695),
+                            CreatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2213),
                             Description = "Cuộc thi chọn ra những giống cá Koi khỏe mạnh nhất.",
                             EndDate = new DateTime(2025, 2, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Image = "https://example.com/koi_breeding_contest.jpg",
-                            LastUpdatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2696),
+                            LastUpdatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2213),
                             Location = "Hồ Chí Minh",
                             Participants = 30,
                             PatternPointPercent = 30,
@@ -532,11 +535,11 @@ namespace KoiShow.Data.Migrations
                             CompetitionType = "Speed",
                             ContactInfo = "swim@koicontest.com",
                             ContestName = "Koi Swimming Contest",
-                            CreatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2703),
+                            CreatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2218),
                             Description = "Cuộc thi tốc độ bơi lội của các giống cá Koi.",
                             EndDate = new DateTime(2025, 3, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Image = "https://example.com/koi_swimming_contest.jpg",
-                            LastUpdatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2704),
+                            LastUpdatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2219),
                             Location = "Hải Phòng",
                             Participants = 25,
                             PatternPointPercent = 30,
@@ -552,11 +555,11 @@ namespace KoiShow.Data.Migrations
                             CompetitionType = "National",
                             ContactInfo = "national@koicontest.com",
                             ContestName = "National Koi Competition",
-                            CreatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2712),
+                            CreatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2224),
                             Description = "Cuộc thi cá Koi lớn nhất toàn quốc.",
                             EndDate = new DateTime(2025, 4, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Image = "https://example.com/national_koi_competition.jpg",
-                            LastUpdatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2713),
+                            LastUpdatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2225),
                             Location = "Huế",
                             Participants = 80,
                             PatternPointPercent = 30,
@@ -572,11 +575,11 @@ namespace KoiShow.Data.Migrations
                             CompetitionType = "Regional",
                             ContactInfo = "regional@koicontest.com",
                             ContestName = "Regional Koi Championship",
-                            CreatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2720),
+                            CreatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2229),
                             Description = "Giải vô địch cá Koi với sự tham gia của các giống cá Koi nổi tiếng.",
                             EndDate = new DateTime(2025, 5, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Image = "https://example.com/regional_koi_championship.jpg",
-                            LastUpdatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2721),
+                            LastUpdatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2230),
                             Location = "Nha Trang",
                             Participants = 60,
                             PatternPointPercent = 30,
@@ -592,11 +595,11 @@ namespace KoiShow.Data.Migrations
                             CompetitionType = "Art",
                             ContactInfo = "art@koicontest.com",
                             ContestName = "Koi Art Exhibition",
-                            CreatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2727),
+                            CreatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2233),
                             Description = "Triển lãm nghệ thuật về cá Koi, tập trung vào vẻ đẹp tự nhiên của loài cá này.",
                             EndDate = new DateTime(2025, 6, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Image = "https://example.com/koi_art_exhibition.jpg",
-                            LastUpdatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2728),
+                            LastUpdatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2234),
                             Location = "Đà Lạt",
                             Participants = 70,
                             PatternPointPercent = 30,
@@ -612,11 +615,11 @@ namespace KoiShow.Data.Migrations
                             CompetitionType = "Innovation",
                             ContactInfo = "innovation@koicontest.com",
                             ContestName = "Koi Innovation Contest",
-                            CreatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2735),
+                            CreatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2238),
                             Description = "Cuộc thi sáng tạo mới về kỹ thuật chăm sóc và lai tạo cá Koi.",
                             EndDate = new DateTime(2025, 7, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Image = "https://example.com/koi_innovation_contest.jpg",
-                            LastUpdatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2736),
+                            LastUpdatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2239),
                             Location = "Vũng Tàu",
                             Participants = 55,
                             PatternPointPercent = 30,
@@ -704,9 +707,9 @@ namespace KoiShow.Data.Migrations
                             ContestId = 1,
                             ContestResultDescription = "Giải nhất cho Koi có màu sắc và hình dáng xuất sắc.",
                             ContestResultName = "Kết quả cuộc thi Koi Đẹp Nhất",
-                            CreatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(3086),
+                            CreatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2472),
                             IsPublished = true,
-                            LastUpdatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(3087),
+                            LastUpdatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2473),
                             Prize = 1000,
                             PrizeDescription = "Cúp vàng và 1000 USD",
                             Rank = 1,
@@ -721,9 +724,9 @@ namespace KoiShow.Data.Migrations
                             ContestId = 1,
                             ContestResultDescription = "Giải nhì cho Koi có hình dáng cân đối.",
                             ContestResultName = "Kết quả cuộc thi Koi Cân Đối Nhất",
-                            CreatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(3094),
+                            CreatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2478),
                             IsPublished = true,
-                            LastUpdatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(3095),
+                            LastUpdatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2479),
                             Prize = 500,
                             PrizeDescription = "Cúp bạc và 500 USD",
                             Rank = 2,
@@ -738,9 +741,9 @@ namespace KoiShow.Data.Migrations
                             ContestId = 2,
                             ContestResultDescription = "Giải nhất cho Koi có sự kết hợp màu sắc độc đáo.",
                             ContestResultName = "Kết quả cuộc thi Koi Sáng Tạo",
-                            CreatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(3101),
+                            CreatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2482),
                             IsPublished = true,
-                            LastUpdatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(3102),
+                            LastUpdatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2482),
                             Prize = 1200,
                             PrizeDescription = "Cúp vàng và 1200 USD",
                             Rank = 1,
@@ -755,9 +758,9 @@ namespace KoiShow.Data.Migrations
                             ContestId = 2,
                             ContestResultDescription = "Giải nhì cho Koi có họa tiết độc đáo.",
                             ContestResultName = "Kết quả cuộc thi Koi Độc Đáo",
-                            CreatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(3107),
+                            CreatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2486),
                             IsPublished = true,
-                            LastUpdatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(3108),
+                            LastUpdatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2486),
                             Prize = 600,
                             PrizeDescription = "Cúp bạc và 600 USD",
                             Rank = 2,
@@ -772,9 +775,9 @@ namespace KoiShow.Data.Migrations
                             ContestId = 3,
                             ContestResultDescription = "Giải nhất cho Koi nhỏ có hình dáng và màu sắc hoàn hảo.",
                             ContestResultName = "Kết quả cuộc thi Koi Nhỏ Đẹp Nhất",
-                            CreatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(3113),
+                            CreatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2489),
                             IsPublished = true,
-                            LastUpdatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(3114),
+                            LastUpdatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2490),
                             Prize = 1500,
                             PrizeDescription = "Cúp vàng và 1500 USD",
                             Rank = 1,
@@ -789,9 +792,9 @@ namespace KoiShow.Data.Migrations
                             ContestId = 3,
                             ContestResultDescription = "Giải nhì cho Koi có đặc điểm khác biệt.",
                             ContestResultName = "Kết quả cuộc thi Koi Độc Lạ",
-                            CreatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(3120),
+                            CreatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2493),
                             IsPublished = true,
-                            LastUpdatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(3121),
+                            LastUpdatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2494),
                             Prize = 800,
                             PrizeDescription = "Cúp bạc và 800 USD",
                             Rank = 2,
@@ -806,9 +809,9 @@ namespace KoiShow.Data.Migrations
                             ContestId = 4,
                             ContestResultDescription = "Giải nhất cho Koi hoàn thiện về cả màu sắc và hình dáng.",
                             ContestResultName = "Kết quả cuộc thi Koi Hoàn Hảo",
-                            CreatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(3126),
+                            CreatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2497),
                             IsPublished = true,
-                            LastUpdatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(3127),
+                            LastUpdatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2497),
                             Prize = 2000,
                             PrizeDescription = "Cúp vàng và 2000 USD",
                             Rank = 1,
@@ -823,9 +826,9 @@ namespace KoiShow.Data.Migrations
                             ContestId = 4,
                             ContestResultDescription = "Giải nhì cho Koi có màu sắc đồng đều.",
                             ContestResultName = "Kết quả cuộc thi Koi Màu Sắc Tốt",
-                            CreatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(3132),
+                            CreatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2501),
                             IsPublished = true,
-                            LastUpdatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(3133),
+                            LastUpdatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2501),
                             Prize = 1000,
                             PrizeDescription = "Cúp bạc và 1000 USD",
                             Rank = 2,
@@ -840,9 +843,9 @@ namespace KoiShow.Data.Migrations
                             ContestId = 5,
                             ContestResultDescription = "Giải nhất cho Koi cân đối về hình dáng.",
                             ContestResultName = "Kết quả cuộc thi Koi Cân Đối Nhất",
-                            CreatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(3138),
+                            CreatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2504),
                             IsPublished = true,
-                            LastUpdatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(3139),
+                            LastUpdatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2505),
                             Prize = 1700,
                             PrizeDescription = "Cúp vàng và 1700 USD",
                             Rank = 1,
@@ -993,14 +996,14 @@ namespace KoiShow.Data.Migrations
                         {
                             Id = 1,
                             ActualCost = 90.450000000000003,
-                            CreatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(3191),
+                            CreatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2542),
                             Currency = "USD",
                             Description = "Payment for registration form 1",
                             DiscountAmount = 10.050000000000001,
                             FinalAmount = 100.5,
-                            LastUpdatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(3192),
+                            LastUpdatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2542),
                             PaymentAmount = 100.5,
-                            PaymentDate = new DateTime(2024, 10, 13, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(3183),
+                            PaymentDate = new DateTime(2026, 2, 15, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2535),
                             PaymentStatus = "Completed",
                             RegisterFormId = 1,
                             TransactionId = "TXN123456789",
@@ -1010,14 +1013,14 @@ namespace KoiShow.Data.Migrations
                         {
                             Id = 2,
                             ActualCost = 138.69,
-                            CreatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(3201),
+                            CreatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2550),
                             Currency = "USD",
                             Description = "Payment for registration form 2",
                             DiscountAmount = 12.06,
                             FinalAmount = 150.75,
-                            LastUpdatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(3202),
+                            LastUpdatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2550),
                             PaymentAmount = 150.75,
-                            PaymentDate = new DateTime(2024, 10, 15, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(3198),
+                            PaymentDate = new DateTime(2026, 2, 17, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2546),
                             PaymentStatus = "Pending",
                             RegisterFormId = 2,
                             TransactionId = "TXN123456790",
@@ -1027,14 +1030,14 @@ namespace KoiShow.Data.Migrations
                         {
                             Id = 3,
                             ActualCost = 190.0,
-                            CreatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(3208),
+                            CreatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2554),
                             Currency = "USD",
                             Description = "Payment for registration form 3",
                             DiscountAmount = 10.0,
                             FinalAmount = 200.0,
-                            LastUpdatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(3209),
+                            LastUpdatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2555),
                             PaymentAmount = 200.0,
-                            PaymentDate = new DateTime(2024, 10, 17, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(3206),
+                            PaymentDate = new DateTime(2026, 2, 19, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2552),
                             PaymentStatus = "Completed",
                             RegisterFormId = 3,
                             TransactionId = "TXN123456791",
@@ -1044,14 +1047,14 @@ namespace KoiShow.Data.Migrations
                         {
                             Id = 4,
                             ActualCost = 232.72999999999999,
-                            CreatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(3216),
+                            CreatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2558),
                             Currency = "USD",
                             Description = "Payment for registration form 4",
                             DiscountAmount = 17.52,
                             FinalAmount = 250.25,
-                            LastUpdatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(3217),
+                            LastUpdatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2559),
                             PaymentAmount = 250.25,
-                            PaymentDate = new DateTime(2024, 10, 19, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(3213),
+                            PaymentDate = new DateTime(2026, 2, 21, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2557),
                             PaymentStatus = "Failed",
                             RegisterFormId = 4,
                             TransactionId = "TXN123456792",
@@ -1061,14 +1064,14 @@ namespace KoiShow.Data.Migrations
                         {
                             Id = 5,
                             ActualCost = 264.66000000000003,
-                            CreatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(3223),
+                            CreatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2563),
                             Currency = "USD",
                             Description = "Payment for registration form 5",
                             DiscountAmount = 36.090000000000003,
                             FinalAmount = 300.75,
-                            LastUpdatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(3224),
+                            LastUpdatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2563),
                             PaymentAmount = 300.75,
-                            PaymentDate = new DateTime(2024, 10, 21, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(3220),
+                            PaymentDate = new DateTime(2026, 2, 23, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2561),
                             PaymentStatus = "Completed",
                             RegisterFormId = 5,
                             TransactionId = "TXN123456793",
@@ -1078,14 +1081,14 @@ namespace KoiShow.Data.Migrations
                         {
                             Id = 6,
                             ActualCost = 315.0,
-                            CreatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(3231),
+                            CreatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2592),
                             Currency = "USD",
                             Description = "Payment for registration form 6",
                             DiscountAmount = 35.0,
                             FinalAmount = 350.0,
-                            LastUpdatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(3232),
+                            LastUpdatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2593),
                             PaymentAmount = 350.0,
-                            PaymentDate = new DateTime(2024, 10, 22, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(3228),
+                            PaymentDate = new DateTime(2026, 2, 24, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2591),
                             PaymentStatus = "Pending",
                             RegisterFormId = 6,
                             TransactionId = "TXN123456794",
@@ -1095,14 +1098,14 @@ namespace KoiShow.Data.Migrations
                         {
                             Id = 7,
                             ActualCost = 340.0,
-                            CreatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(3238),
+                            CreatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2597),
                             Currency = "USD",
                             Description = "Payment for registration form 7",
                             DiscountAmount = 60.0,
                             FinalAmount = 400.0,
-                            LastUpdatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(3239),
+                            LastUpdatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2597),
                             PaymentAmount = 400.0,
-                            PaymentDate = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(3235),
+                            PaymentDate = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2595),
                             PaymentStatus = "Completed",
                             RegisterFormId = 7,
                             TransactionId = "TXN123456795",
@@ -1112,14 +1115,14 @@ namespace KoiShow.Data.Migrations
                         {
                             Id = 8,
                             ActualCost = 409.95999999999998,
-                            CreatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(3245),
+                            CreatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2601),
                             Currency = "USD",
                             Description = "Payment for registration form 8",
                             DiscountAmount = 40.539999999999999,
                             FinalAmount = 450.5,
-                            LastUpdatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(3246),
+                            LastUpdatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2601),
                             PaymentAmount = 450.5,
-                            PaymentDate = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(3242),
+                            PaymentDate = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2599),
                             PaymentStatus = "Failed",
                             RegisterFormId = 8,
                             TransactionId = "TXN123456796",
@@ -1129,14 +1132,14 @@ namespace KoiShow.Data.Migrations
                         {
                             Id = 9,
                             ActualCost = 400.0,
-                            CreatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(3252),
+                            CreatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2605),
                             Currency = "USD",
                             Description = "Payment for registration form 9",
                             DiscountAmount = 100.0,
                             FinalAmount = 500.0,
-                            LastUpdatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(3253),
+                            LastUpdatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2606),
                             PaymentAmount = 500.0,
-                            PaymentDate = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(3249),
+                            PaymentDate = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2603),
                             PaymentStatus = "Completed",
                             RegisterFormId = 9,
                             TransactionId = "TXN123456797",
@@ -1217,10 +1220,10 @@ namespace KoiShow.Data.Migrations
                             Id = 1,
                             ColorPoint = 90,
                             Comment = "Hình dáng cân đối, màu sắc nổi bật.",
-                            CreatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2908),
+                            CreatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2403),
                             JudgeRank = "Expert",
                             JuryId = 1,
-                            LastUpdatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2909),
+                            LastUpdatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2403),
                             PatternPoint = 88,
                             Penalties = 0,
                             PointStatus = 1,
@@ -1233,10 +1236,10 @@ namespace KoiShow.Data.Migrations
                             Id = 2,
                             ColorPoint = 85,
                             Comment = "Hình dáng ổn định, màu sắc hài hòa.",
-                            CreatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2917),
+                            CreatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2408),
                             JudgeRank = "Intermediate",
                             JuryId = 2,
-                            LastUpdatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2918),
+                            LastUpdatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2409),
                             PatternPoint = 82,
                             Penalties = 1,
                             PointStatus = 1,
@@ -1249,10 +1252,10 @@ namespace KoiShow.Data.Migrations
                             Id = 3,
                             ColorPoint = 95,
                             Comment = "Xuất sắc trong mọi khía cạnh.",
-                            CreatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2934),
+                            CreatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2412),
                             JudgeRank = "Master",
                             JuryId = 3,
-                            LastUpdatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2935),
+                            LastUpdatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2412),
                             PatternPoint = 94,
                             Penalties = 0,
                             PointStatus = 1,
@@ -1265,10 +1268,10 @@ namespace KoiShow.Data.Migrations
                             Id = 4,
                             ColorPoint = 75,
                             Comment = "Hình dáng tốt nhưng màu sắc cần cải thiện.",
-                            CreatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2940),
+                            CreatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2416),
                             JudgeRank = "Novice",
                             JuryId = 4,
-                            LastUpdatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2941),
+                            LastUpdatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2416),
                             PatternPoint = 78,
                             Penalties = 2,
                             PointStatus = 1,
@@ -1281,10 +1284,10 @@ namespace KoiShow.Data.Migrations
                             Id = 5,
                             ColorPoint = 90,
                             Comment = "Hình dáng và màu sắc đẹp, có vài khuyết điểm nhỏ.",
-                            CreatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2946),
+                            CreatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2420),
                             JudgeRank = "Expert",
                             JuryId = 1,
-                            LastUpdatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2947),
+                            LastUpdatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2420),
                             PatternPoint = 85,
                             Penalties = 0,
                             PointStatus = 1,
@@ -1297,10 +1300,10 @@ namespace KoiShow.Data.Migrations
                             Id = 6,
                             ColorPoint = 88,
                             Comment = "Màu sắc đẹp nhưng hình dáng còn chưa đồng đều.",
-                            CreatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2953),
+                            CreatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2424),
                             JudgeRank = "Intermediate",
                             JuryId = 2,
-                            LastUpdatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2954),
+                            LastUpdatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2425),
                             PatternPoint = 86,
                             Penalties = 1,
                             PointStatus = 1,
@@ -1313,10 +1316,10 @@ namespace KoiShow.Data.Migrations
                             Id = 7,
                             ColorPoint = 97,
                             Comment = "Hoàn hảo trong tất cả các yếu tố.",
-                            CreatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2959),
+                            CreatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2428),
                             JudgeRank = "Master",
                             JuryId = 3,
-                            LastUpdatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2960),
+                            LastUpdatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2428),
                             PatternPoint = 96,
                             Penalties = 0,
                             PointStatus = 1,
@@ -1329,10 +1332,10 @@ namespace KoiShow.Data.Migrations
                             Id = 8,
                             ColorPoint = 80,
                             Comment = "Hình dáng và màu sắc trung bình, cần cải thiện.",
-                            CreatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2965),
+                            CreatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2431),
                             JudgeRank = "Novice",
                             JuryId = 4,
-                            LastUpdatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2966),
+                            LastUpdatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2432),
                             PatternPoint = 82,
                             Penalties = 3,
                             PointStatus = 1,
@@ -1345,16 +1348,131 @@ namespace KoiShow.Data.Migrations
                             Id = 9,
                             ColorPoint = 92,
                             Comment = "Rất tốt, hình dáng và màu sắc gần như hoàn hảo.",
-                            CreatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2972),
+                            CreatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2435),
                             JudgeRank = "Expert",
                             JuryId = 1,
-                            LastUpdatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2973),
+                            LastUpdatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2436),
                             PatternPoint = 91,
                             Penalties = 0,
                             PointStatus = 1,
                             RegisterFormId = 9,
                             ShapePoint = 90,
                             TotalScore = 273
+                        });
+                });
+
+            modelBuilder.Entity("KoiShow.Data.Models.RefreshToken", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("AccountId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("CreatedBy")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("CreatedTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("DeletedBy")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("DeletedTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("ExpiryDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsRevoked")
+                        .HasColumnType("bit");
+
+                    b.Property<int?>("LastUpdatedBy")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("LastUpdatedTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ReplacedByToken")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("RevokedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Token")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AccountId");
+
+                    b.HasIndex(new[] { "Id" }, "Index_Id")
+                        .IsUnique();
+
+                    b.ToTable("RefreshTokens");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            AccountId = 1,
+                            CreatedAt = new DateTime(2026, 2, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreatedTime = new DateTime(2026, 2, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpiryDate = new DateTime(2026, 3, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsRevoked = false,
+                            LastUpdatedTime = new DateTime(2026, 2, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Token = "refresh_admin_001"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            AccountId = 2,
+                            CreatedAt = new DateTime(2026, 2, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreatedTime = new DateTime(2026, 2, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpiryDate = new DateTime(2026, 3, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsRevoked = false,
+                            LastUpdatedTime = new DateTime(2026, 2, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Token = "refresh_staff_001"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            AccountId = 3,
+                            CreatedAt = new DateTime(2026, 2, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreatedTime = new DateTime(2026, 2, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpiryDate = new DateTime(2026, 3, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsRevoked = false,
+                            LastUpdatedTime = new DateTime(2026, 2, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Token = "refresh_customer1_001"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            AccountId = 4,
+                            CreatedAt = new DateTime(2026, 2, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreatedTime = new DateTime(2026, 2, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpiryDate = new DateTime(2026, 3, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsRevoked = false,
+                            LastUpdatedTime = new DateTime(2026, 2, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Token = "refresh_customer2_001"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            AccountId = 5,
+                            CreatedAt = new DateTime(2026, 2, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreatedTime = new DateTime(2026, 2, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpiryDate = new DateTime(2026, 3, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsRevoked = false,
+                            LastUpdatedTime = new DateTime(2026, 2, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Token = "refresh_customer3_001"
                         });
                 });
 
@@ -1443,11 +1561,11 @@ namespace KoiShow.Data.Migrations
                             CheckinStatus = "Checked In",
                             Color = "Red",
                             ContestId = 1,
-                            CreatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2793),
+                            CreatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2277),
                             EntryTitle = "Koi Sắc Màu Đỏ",
                             HealthStatus = "Good",
                             Image = "https://example.com/koi_red.jpg",
-                            LastUpdatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2794),
+                            LastUpdatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2278),
                             Notes = "Cá khỏe mạnh, nổi bật với màu sắc đỏ rực.",
                             Pattern = "Solid",
                             RegistrationDate = new DateTime(2024, 11, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -1462,11 +1580,11 @@ namespace KoiShow.Data.Migrations
                             CheckinStatus = "Checked In",
                             Color = "Black and White",
                             ContestId = 1,
-                            CreatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2802),
+                            CreatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2284),
                             EntryTitle = "Koi Trắng Đen",
                             HealthStatus = "Fair",
                             Image = "https://example.com/koi_black_white.jpg",
-                            LastUpdatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2803),
+                            LastUpdatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2284),
                             Notes = "Cá có màu sắc hài hòa giữa trắng và đen.",
                             Pattern = "Mixed",
                             RegistrationDate = new DateTime(2024, 11, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -1481,11 +1599,11 @@ namespace KoiShow.Data.Migrations
                             CheckinStatus = "Checked In",
                             Color = "Yellow",
                             ContestId = 2,
-                            CreatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2812),
+                            CreatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2288),
                             EntryTitle = "Koi Vàng Óng",
                             HealthStatus = "Excellent",
                             Image = "https://example.com/koi_yellow.jpg",
-                            LastUpdatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2813),
+                            LastUpdatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2288),
                             Notes = "Màu vàng óng ánh, thân hình cân đối.",
                             Pattern = "Solid",
                             RegistrationDate = new DateTime(2024, 12, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -1500,11 +1618,11 @@ namespace KoiShow.Data.Migrations
                             CheckinStatus = "Pending",
                             Color = "Orange",
                             ContestId = 2,
-                            CreatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2818),
+                            CreatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2292),
                             EntryTitle = "Koi Cam Nổi Bật",
                             HealthStatus = "Good",
                             Image = "https://example.com/koi_orange.jpg",
-                            LastUpdatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2819),
+                            LastUpdatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2293),
                             Notes = "Cá Koi cam rực rỡ, độc đáo.",
                             Pattern = "Mixed",
                             RegistrationDate = new DateTime(2024, 12, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -1519,11 +1637,11 @@ namespace KoiShow.Data.Migrations
                             CheckinStatus = "Checked In",
                             Color = "Black",
                             ContestId = 3,
-                            CreatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2825),
+                            CreatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2296),
                             EntryTitle = "Koi Đen Bóng",
                             HealthStatus = "Excellent",
                             Image = "https://example.com/koi_black.jpg",
-                            LastUpdatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2826),
+                            LastUpdatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2297),
                             Notes = "Cá Koi với màu đen bóng khỏe mạnh.",
                             Pattern = "Solid",
                             RegistrationDate = new DateTime(2025, 1, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -1538,11 +1656,11 @@ namespace KoiShow.Data.Migrations
                             CheckinStatus = "Checked In",
                             Color = "Blue",
                             ContestId = 3,
-                            CreatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2833),
+                            CreatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2301),
                             EntryTitle = "Koi Xanh Biển",
                             HealthStatus = "Fair",
                             Image = "https://example.com/koi_blue.jpg",
-                            LastUpdatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2834),
+                            LastUpdatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2302),
                             Notes = "Cá Koi có màu xanh biển đậm.",
                             Pattern = "Mixed",
                             RegistrationDate = new DateTime(2025, 1, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -1557,11 +1675,11 @@ namespace KoiShow.Data.Migrations
                             CheckinStatus = "Pending",
                             Color = "Gray",
                             ContestId = 4,
-                            CreatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2839),
+                            CreatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2340),
                             EntryTitle = "Koi Xám Khói",
                             HealthStatus = "Good",
                             Image = "https://example.com/koi_gray.jpg",
-                            LastUpdatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2840),
+                            LastUpdatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2340),
                             Notes = "Màu xám khói độc đáo, cá có sức sống tốt.",
                             Pattern = "Solid",
                             RegistrationDate = new DateTime(2025, 2, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -1576,11 +1694,11 @@ namespace KoiShow.Data.Migrations
                             CheckinStatus = "Checked In",
                             Color = "Pink",
                             ContestId = 4,
-                            CreatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2846),
+                            CreatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2344),
                             EntryTitle = "Koi Hồng Nhẹ Nhàng",
                             HealthStatus = "Excellent",
                             Image = "https://example.com/koi_pink.jpg",
-                            LastUpdatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2847),
+                            LastUpdatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2344),
                             Notes = "Cá Koi màu hồng phớt nhẹ nhàng.",
                             Pattern = "Mixed",
                             RegistrationDate = new DateTime(2025, 2, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -1595,11 +1713,11 @@ namespace KoiShow.Data.Migrations
                             CheckinStatus = "Checked In",
                             Color = "Purple",
                             ContestId = 5,
-                            CreatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2853),
+                            CreatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2348),
                             EntryTitle = "Koi Tím Thủy Chung",
                             HealthStatus = "Fair",
                             Image = "https://example.com/koi_purple.jpg",
-                            LastUpdatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2854),
+                            LastUpdatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2349),
                             Notes = "Màu tím độc đáo, thân hình cân đối.",
                             Pattern = "Solid",
                             RegistrationDate = new DateTime(2025, 3, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -1651,73 +1769,73 @@ namespace KoiShow.Data.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2444),
+                            CreatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2007),
                             Description = "Cá Koi với các đốm màu đỏ trên nền trắng.",
-                            LastUpdatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2445),
+                            LastUpdatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2007),
                             Name = "Kohaku"
                         },
                         new
                         {
                             Id = 2,
-                            CreatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2450),
+                            CreatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2011),
                             Description = "Cá Koi với các đốm đỏ và đen trên nền trắng.",
-                            LastUpdatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2451),
+                            LastUpdatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2011),
                             Name = "Taisho Sanke"
                         },
                         new
                         {
                             Id = 3,
-                            CreatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2455),
+                            CreatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2013),
                             Description = "Cá Koi với các đốm đen và đỏ trên nền trắng, thường có màu đen trên đầu.",
-                            LastUpdatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2456),
+                            LastUpdatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2014),
                             Name = "Showa Sanshoku"
                         },
                         new
                         {
                             Id = 4,
-                            CreatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2459),
+                            CreatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2016),
                             Description = "Cá Koi đen với các đốm trắng xen kẽ.",
-                            LastUpdatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2460),
+                            LastUpdatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2016),
                             Name = "Shiro Utsuri"
                         },
                         new
                         {
                             Id = 5,
-                            CreatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2463),
+                            CreatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2018),
                             Description = "Cá Koi đen với các đốm đỏ tươi.",
-                            LastUpdatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2464),
+                            LastUpdatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2019),
                             Name = "Hi Utsuri"
                         },
                         new
                         {
                             Id = 6,
-                            CreatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2468),
+                            CreatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2021),
                             Description = "Cá Koi đen với các đốm vàng.",
-                            LastUpdatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2469),
+                            LastUpdatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2022),
                             Name = "Ki Utsuri"
                         },
                         new
                         {
                             Id = 7,
-                            CreatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2472),
+                            CreatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2024),
                             Description = "Cá Koi với vảy màu xanh nhạt trên lưng và bụng màu đỏ.",
-                            LastUpdatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2473),
+                            LastUpdatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2024),
                             Name = "Asagi"
                         },
                         new
                         {
                             Id = 8,
-                            CreatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2477),
+                            CreatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2026),
                             Description = "Loại cá Koi da trơn với các vảy lớn chạy dọc theo lưng, có màu xanh nhạt và đỏ.",
-                            LastUpdatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2478),
+                            LastUpdatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2027),
                             Name = "Shusui"
                         },
                         new
                         {
                             Id = 9,
-                            CreatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2481),
+                            CreatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2029),
                             Description = "Cá Koi có màu trắng, đỏ hoặc vàng với các đốm đen.",
-                            LastUpdatedTime = new DateTime(2024, 10, 23, 7, 48, 31, 77, DateTimeKind.Local).AddTicks(2482),
+                            LastUpdatedTime = new DateTime(2026, 2, 25, 22, 19, 31, 532, DateTimeKind.Local).AddTicks(2029),
                             Name = "Bekko"
                         });
                 });
@@ -1779,6 +1897,17 @@ namespace KoiShow.Data.Migrations
                     b.Navigation("RegisterForm");
                 });
 
+            modelBuilder.Entity("KoiShow.Data.Models.RefreshToken", b =>
+                {
+                    b.HasOne("KoiShow.Data.Models.Account", "Account")
+                        .WithMany("RefreshTokens")
+                        .HasForeignKey("AccountId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Account");
+                });
+
             modelBuilder.Entity("KoiShow.Data.Models.RegisterForm", b =>
                 {
                     b.HasOne("KoiShow.Data.Models.Animal", "Animal")
@@ -1801,6 +1930,8 @@ namespace KoiShow.Data.Migrations
                     b.Navigation("News");
 
                     b.Navigation("Points");
+
+                    b.Navigation("RefreshTokens");
                 });
 
             modelBuilder.Entity("KoiShow.Data.Models.Animal", b =>

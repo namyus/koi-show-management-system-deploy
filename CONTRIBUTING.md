@@ -84,3 +84,42 @@ If you prefer to fork the repository and manage your own copy:
 5. **Follow the branching strategy and development process as outlined above.**
 
 By forking the repository, you can maintain and develop your own version independently.
+
+## Running with Docker (Recommended for Contributors)
+
+If you do not want to install SQL Server locally, you can run the full backend using Docker.
+
+### Step 1: Install Docker Desktop
+
+Download from:  
+https://www.docker.com/products/docker-desktop
+
+### Step 2: Start the Project
+
+From the root project directory:
+
+```bash
+docker compose up --build
+```
+## This will start:
+
+1. SQL Server container
+
+2. API container
+
+### Step 3: Access the API
+
+1. API: http://localhost:8080
+
+2. Swagger: http://localhost:8080/swagger
+
+### Step 4: Stop Containers
+   ```bash
+   docker compose down
+   ```
+### Step 5: Reset Database (If Needed)
+   ```bash
+   docker compose down -v
+   ```
+
+ **This removes the SQL volume and recreates the database on the next startup.**

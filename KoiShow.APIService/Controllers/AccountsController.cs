@@ -27,39 +27,82 @@ namespace KoiShow.APIService.Controllers
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginRequestDTO loginModel)
         {
-            var businessResult = await _accountService.GetByUserNameAndPassword(loginModel.UserName, loginModel.Password);
+            var account = await _accountService
+                .ValidateUserAsync(loginModel.UserName, loginModel.Password);
 
-            if (businessResult.Status == Const.SUCCESS_READ_CODE)
+            if (account == null)
+                return Unauthorized();
+
+            var accessToken = _jwtHelper.GenerateToken(account);
+            var refreshTokenString = _jwtHelper.GenerateRefreshToken();
+
+            var refreshToken = new RefreshToken
             {
-                var account = (Account)businessResult.Data;
-                var token = _jwtHelper.GenerateToken(account);
-                return Ok(new { token });
-            }
+                Token = refreshTokenString,
+                ExpiryDate = DateTime.UtcNow.AddDays(7),
+                IsRevoked = false,
+                AccountId = account.Id,
+                CreatedTime = DateTime.UtcNow
+            };
 
-            return Unauthorized();
-        }
-
-        [Authorize]  
-        [HttpGet("profile")]
-        public IActionResult GetProfile()
-        {
-            var id = User.FindFirst("id")?.Value;
-            var address = User.FindFirst("address")?.Value;
-            var email = User.FindFirst("appEmail")?.Value;
-            var birthday = User.FindFirst("birthday")?.Value;
-            var username = User.FindFirst("username")?.Value;
-            var role = User.FindFirst("appRole")?.Value;
-            var fullName = User.FindFirst("fullName")?.Value;
+            await _accountService.SaveRefreshToken(refreshToken);
 
             return Ok(new
             {
-                Id = id,
-                Address = address,
-                Email = email,
-                Birthday = birthday,
-                UserName = username,
-                Role = role,
-                FullName = fullName
+                accessToken,
+                refreshToken = refreshTokenString
+            });
+        }
+
+        [HttpPost("refresh")]
+        public async Task<IActionResult> Refresh([FromBody] RefreshTokenRequestDTO request)
+        {
+            var storedToken = await _accountService
+                .GetRefreshTokenAsync(request.RefreshToken);
+
+            if (storedToken == null ||
+                storedToken.IsRevoked ||
+                storedToken.ExpiryDate < DateTime.UtcNow)
+                return Unauthorized();
+
+            var account = await _accountService
+                .GetByIdAsync(storedToken.AccountId);
+
+            if (account == null)
+                return Unauthorized();
+
+            var newAccessToken = _jwtHelper.GenerateToken(account);
+
+            return Ok(new
+            {
+                accessToken = newAccessToken
+            });
+        }
+
+        [Authorize]
+        [HttpGet("profile")]
+        public async Task<IActionResult> GetProfile()
+        {
+            var idClaim = User.FindFirst("id")?.Value;
+
+            if (idClaim == null)
+                return Unauthorized();
+
+            var account = await _accountService.GetByIdAsync(int.Parse(idClaim));
+
+            if (account == null)
+                return NotFound();
+
+            return Ok(new
+            {
+                account.Id,
+                account.UserName,
+                account.Email,
+                account.FullName,
+                account.BirthDay,
+                account.Phone,
+                account.Address,
+                account.Role
             });
         }
     }

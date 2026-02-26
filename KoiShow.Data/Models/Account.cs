@@ -32,4 +32,6 @@ public partial class Account : BaseEntity
     public virtual ICollection<New>? News { get; set; } = new List<New>();
 
     public virtual ICollection<Point>? Points { get; set; } = new List<Point>();
+
+    public virtual ICollection<RefreshToken>? RefreshTokens { get; set; }
 }

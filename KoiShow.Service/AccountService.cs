@@ -12,30 +12,52 @@ namespace KoiShow.Service
 {
     public interface IAccountService
     {
-        Task<IBusinessResult> GetByUserNameAndPassword(string userName, string password);
+        Task<Account?> ValidateUserAsync(string userName, string password);
+        Task<Account?> GetByIdAsync(int id);
+
+        Task SaveRefreshToken(RefreshToken refreshToken);
+        Task<RefreshToken?> GetRefreshTokenAsync(string token);
     }
 
     public class AccountService : IAccountService
     {
         private readonly UnitOfWork _unitOfWork;
-        
+
         public AccountService()
         {
             _unitOfWork ??= new UnitOfWork();
         }
 
-        public async Task<IBusinessResult> GetByUserNameAndPassword(string userName, string password)
+        // ✅ Login logic (query thẳng DB)
+        public async Task<Account?> ValidateUserAsync(string userName, string password)
         {
-            var accounts = await _unitOfWork.AccountRepository.GetAllAsync();
-            var account = accounts.Where(e => e.UserName == userName && e.Password == password).FirstOrDefault();
+            var accounts = await _unitOfWork.AccountRepository
+                .GetByConditionWithIncludeAsync(
+                    x => x.UserName == userName && x.Password == password
+                );
 
-            if (account == null)
-            {
-                return new BusinessResult(Const.WARNING_NO_DATA_CODE, Const.WARNING_NO_DATA_MSG, new Account());
-            } else
-            {
-                return new BusinessResult(Const.SUCCESS_READ_CODE, Const.SUCCESS_READ_MSG, account);
-            }
+            return accounts.FirstOrDefault();
+        }
+
+        // ✅ Get account theo id (dùng cho profile)
+        public async Task<Account?> GetByIdAsync(int id)
+        {
+            return await _unitOfWork.AccountRepository.GetByIdAsync(id);
+        }
+
+        // ✅ Save refresh token
+        public async Task SaveRefreshToken(RefreshToken refreshToken)
+        {
+            await _unitOfWork.RefreshTokenRepository.CreateAsync(refreshToken);
+        }
+
+        // ✅ Get refresh token
+        public async Task<RefreshToken?> GetRefreshTokenAsync(string token)
+        {
+            var tokens = await _unitOfWork.RefreshTokenRepository
+                .GetByConditionWithIncludeAsync(x => x.Token == token);
+
+            return tokens.FirstOrDefault();
         }
     }
 }

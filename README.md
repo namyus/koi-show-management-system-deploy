@@ -76,3 +76,22 @@ The API provides endpoints to manage:
 </div>
 <br/>
 
+---
+
+## Docker Setup
+
+This project includes Docker support for running the API and SQL Server in containers.
+
+### Requirements
+
+- Docker Desktop
+- Docker Compose
+
+### Running with Docker
+
+1. Make sure Docker Desktop is running.
+
+2. From the root directory of the project, run:
+
+   ```bash
+   docker compose up --build
