@@ -68,11 +68,6 @@ The API provides endpoints to manage:
 
 ## Screenshots
 
-<div style="text-align: center;">
-    <img src="https://ibb.co/vxMVh65N" style="width: 70%;"/>
-    <p><em>Screenshot 1</em></p>
-</div>
-
 <div align="center">
   <img src="https://i.ibb.co/kgP5JsnL/Screenshot-2026-01-31-211054.png" width="70%" />
   <p><em>Screenshot 1</em></p>
